@@ -5,7 +5,7 @@ function bmi(peso, altura) {
         return "Error: ingresa un valor correcto de peso y altura";
     }
 
-    let imc = peso / (altura * altura);
+    let imc = peso / (Math.pow (altura, 2));
     return imc;
 }
 // código de prueba
