@@ -1,12 +1,15 @@
 // escribe la función bmi acá
-var peso
-var altura
-
 
 function bmi(peso, altura) {
-    console.log(peso / (Math.pow(altura, 2)));
+    if (peso <= 0 || altura <= 0 || peso == null || altura == null) {
+        return "Error: ingresa un valor correcto de peso y altura";
+    }
+
+    let imc = peso / (altura * altura);
+    return imc;
 }
 // código de prueba
 console.log(bmi(65, 1.8)); // 20.061728395061728
 console.log(bmi(72, 1.6)); // 28.124999999999993
 console.log(bmi(52, 1.75)); //  16.979591836734695
+console.log(bmi(52)); //  "Error: ingresa un valor correcto de peso y altura"
