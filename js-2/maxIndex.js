@@ -5,7 +5,7 @@ function maxIndex(arr) {
     }
     let numeroMaximo = arr[0];
     let posicion = 0;
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 1; i < arr.length; i++) {
         if (numeroMaximo < arr[i]) {
             numeroMaximo = arr[i];
             posicion = i;
